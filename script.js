@@ -124,23 +124,34 @@ window.onload=function(){
     })
 }
 
-var stand = function() {
-    while (getscoreofcards('dealer')<17){
+var check17 = function(){
+    if(getscoreofcards('dealer')>17){
+        return
+    } else {
         hit('dealer')
+        setTimeout(function(){
+            check17()
+        },1000)
     }
-    //player wins
-    if(getscoreofcards('dealer')<getscoreofcards('player', true)  ){
-        document.getElementById('winner').innerHTML = 'player wins!'
-        document.getElementById('chips').innerHTML = parseInt(document.getElementById('chips').innerHTML)+100
-    }
-    //dealer wins
-    else if (getscoreofcards('dealer') > getscoreofcards('player', true) && getscoreofcards('dealer') < 22){
-        document.getElementById('winner').innerHTML = 'dealer wins!'
-        document.getElementById('chips').innerHTML-=100
-    }
-    else if (getscoreofcards('dealer') == getscoreofcards('player',true)){
-        document.getElementById('winner').innerHTML = 'push - tie'
-    }
+}
+
+var stand = function() {
+    check17()
+    setTimeout(function(){
+        if(getscoreofcards('dealer')<getscoreofcards('player', true)  ){
+            document.getElementById('winner').innerHTML = 'player wins!'
+            document.getElementById('chips').innerHTML = parseInt(document.getElementById('chips').innerHTML)+100
+        }
+        //dealer wins
+        else if (getscoreofcards('dealer') > getscoreofcards('player', true) && getscoreofcards('dealer') < 22){
+            document.getElementById('winner').innerHTML = 'dealer wins!'
+            document.getElementById('chips').innerHTML-=100
+        }
+        else if (getscoreofcards('dealer') == getscoreofcards('player',true)){
+            document.getElementById('winner').innerHTML = 'push - tie'
+        }
+    },1800)
+    
 }
 
 //function to return hand of player || dealer
