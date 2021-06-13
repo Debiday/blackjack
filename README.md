@@ -7,6 +7,7 @@ lots of bugs to fix
 
 to do 
 
+0) if arr.length less than ... reshuffle
 4) delay between hand hit 
 1) add splits
 2) keep track of chips
@@ -15,6 +16,7 @@ to do
 6) add option to surrender
 7) add card counter
 8) add multiple deck options
+9) option for dealer to hit/stand on soft 17
 
 start with 100 chips
 bet size increments of 25, 50, 100

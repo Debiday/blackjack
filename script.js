@@ -4,6 +4,7 @@ var x = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
 var suits = ['H','S','C','D'];
 var deck = {};
 var players = ['player','dealer']
+localStorage.setItem('chips',100)
 
 //make a deck
 for(i=0;i<300;i++){
@@ -116,7 +117,10 @@ window.onload=function(){
         stand()
     })
     document.getElementById('reset').addEventListener('click',function(){
-        location.reload();
+        reset();
+    })
+    document.getElementById('morechips').addEventListener('click',function(){
+        document.getElementById('chips').innerHTML = parseInt(document.getElementById('chips').innerHTML)+100
     })
 }
 
@@ -142,6 +146,7 @@ var stand = function() {
 //function to return hand of player || dealer
 var returnhand = function (who) {
     var x = document.getElementById(who).children;
+    console.log(x)
     var cards = []
     for(i=0;i<x.length;i++){
         if(x[i].localName=="div"){
@@ -158,6 +163,37 @@ var returnhand = function (who) {
 }
 
 
-var reset = {
-    t
+var reset = function () {
+    //delete cards - get all divs that start with card
+    var x = document.getElementById('player').children;
+    for(i=0;i<x.length;i++){
+        if(x[i].localName=="div"){
+            var y = document.getElementById(x[i].id)
+            y.remove()
+            i--
+        }
+    }
+    var a = document.getElementById('dealer').children;
+    for(i=0;i<a.length;i++){
+        if(a[i].localName=="div"){
+            var y = document.getElementById(a[i].id)
+            y.remove()
+            i--
+        }
+    }
+    updatescore('player')
+    updatescore('dealer')
+    document.getElementById('winner').innerHTML=''
+    document.getElementById('playerbust').innerHTML=''
+    document.getElementById('dealerbust').innerHTML=''
+    var players = ['player','dealer']
+    hit('player');
+    hit('player');
+    hit('dealer');
+    //clear data
+    localStorage.clear()
+}
+
+var reshuffle(){
+    
 }
