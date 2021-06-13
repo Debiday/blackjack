@@ -1,10 +1,12 @@
 # blackjack
 
 [site](https://adnjoo.github.io/blackjack/)
+[figma](https://www.figma.com/file/OdiVarkV5QEDUBjYn2EvhP/blackjack)
 
 lots of bugs to fix
 
 to do 
+
 4) delay between hand hit 
 1) add splits
 2) keep track of chips
