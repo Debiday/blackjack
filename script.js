@@ -29,7 +29,7 @@ var hit = function (who) {
     updatescore(who);
 }
 
-var getscoreofcards = function (who) { //pass who in, should return score of who's cards
+var getscoreofcards = function (who,final) { //pass who in, should return score of who's cards
     var cards = returnhand(who);
     var total = 0;
     for(i = 0; i < cards.length; i++){ 
