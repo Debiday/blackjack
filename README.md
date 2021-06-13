@@ -29,5 +29,5 @@ bet size increments of 25, 50, 100
 refactor
 1) make a deck function
 2) tidy code up
-
+3) add responsive site
 
