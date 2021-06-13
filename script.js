@@ -82,9 +82,9 @@ var updatescore = function (who) {
     //return score/ update score
     var y = getscoreofcards(who)
     if(y > 21){
-        //if who goes bust, the other player wins.
         document.getElementById(who+'bust').innerHTML = 'bust'
         players.splice(players.indexOf(who), 1)
+        console.log(players)
         document.getElementById('winner').innerHTML = players[0] + ' wins!'
         //if dealer goes bust, multiply chips times 2
         if(players[0]=='player'){
@@ -122,13 +122,12 @@ var stand = function() {
         hit('dealer')
     }
     //player wins
-    if(getscoreofcards('dealer')<getscoreofcards('player')){
+    if(getscoreofcards('dealer')<getscoreofcards('player')  ){
         document.getElementById('winner').innerHTML = 'player wins!'
         document.getElementById('chips').innerHTML = parseInt(document.getElementById('chips').innerHTML)+100
-
     }
     //dealer wins
-    else if (getscoreofcards('dealer') > getscoreofcards('player')){
+    else if (getscoreofcards('dealer') > getscoreofcards('player') && getscoreofcards('dealer') < 22){
         document.getElementById('winner').innerHTML = 'dealer wins!'
         document.getElementById('chips').innerHTML-=100
     }
