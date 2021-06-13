@@ -5,9 +5,9 @@
 [figma](https://www.figma.com/file/OdiVarkV5QEDUBjYn2EvhP/blackjack)
 
 lots of bugs to fix
-1) undefined wins? --> i thought we reset the players array 
-I think it's fixed.. was declaring var players again.
-to do 
+1) 4, A , 8, 7
+
+Bug check get score function with the ace part logic
 
 0) if arr.length less than ... reshuffle
 4) delay between hand hit 
