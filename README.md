@@ -1,9 +1,11 @@
 # blackjack
 
 [site](https://adnjoo.github.io/blackjack/)
+
 [figma](https://www.figma.com/file/OdiVarkV5QEDUBjYn2EvhP/blackjack)
 
 lots of bugs to fix
+1) undefined wins? --> i thought we reset the players array 
 
 to do 
 
@@ -24,3 +26,5 @@ bet size increments of 25, 50, 100
 refactor
 1) make a deck function
 2) tidy code up
+
+

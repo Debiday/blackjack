@@ -194,6 +194,6 @@ var reset = function () {
     localStorage.clear()
 }
 
-var reshuffle(){
-    
+var reshuffle = function (){
+
 }
