@@ -1,6 +1,6 @@
 //declare variables: cards, suits
 var counter = 0;
-var x= ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+var x = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
 var suits = ['H','S','C','D'];
 var deck = {};
 var players = ['player','dealer']
@@ -29,7 +29,7 @@ var hit = function (who) {
     updatescore(who);
 }
 
-var getscoreofcards = function (who,final) { //pass who in, should return score of who's cards
+var getscoreofcards = function (who, final) { //pass who in, should return score of who's cards
     var cards = returnhand(who);
     var total = 0;
     for(i = 0; i < cards.length; i++){ 
@@ -72,7 +72,10 @@ var getscoreofcards = function (who,final) { //pass who in, should return score 
             return a;
         } 
         if (who=='dealer'){
-            return b
+            return b;
+        }
+        if(final){
+            return b;
         }
         return ('total is '+ a.toString() + ' or ' + b.toString());
     }
@@ -122,12 +125,12 @@ var stand = function() {
         hit('dealer')
     }
     //player wins
-    if(getscoreofcards('dealer')<getscoreofcards('player')  ){
+    if(getscoreofcards('dealer')<getscoreofcards('player', true)  ){
         document.getElementById('winner').innerHTML = 'player wins!'
         document.getElementById('chips').innerHTML = parseInt(document.getElementById('chips').innerHTML)+100
     }
     //dealer wins
-    else if (getscoreofcards('dealer') > getscoreofcards('player') && getscoreofcards('dealer') < 22){
+    else if (getscoreofcards('dealer') > getscoreofcards('player', true) && getscoreofcards('dealer') < 22){
         document.getElementById('winner').innerHTML = 'dealer wins!'
         document.getElementById('chips').innerHTML-=100
     }
@@ -152,4 +155,9 @@ var returnhand = function (who) {
     }
     console.log('hand is',cards)
     return cards
+}
+
+
+var reset = {
+    t
 }
