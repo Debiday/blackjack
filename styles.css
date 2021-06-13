@@ -1,0 +1,15 @@
+* {
+    font-size: 30px;
+}
+
+#player {
+    border: 3px solid blue;
+}
+
+#dealer {
+    border: 3px solid green;
+}
+
+#buttons {
+    border: 3px solid red;
+}
