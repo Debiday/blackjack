@@ -186,7 +186,7 @@ var reset = function () {
     document.getElementById('winner').innerHTML=''
     document.getElementById('playerbust').innerHTML=''
     document.getElementById('dealerbust').innerHTML=''
-    var players = ['player','dealer']
+    players = ['player','dealer']
     hit('player');
     hit('player');
     hit('dealer');
