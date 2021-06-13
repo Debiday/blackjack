@@ -138,7 +138,7 @@ var stand = function() {
         document.getElementById('winner').innerHTML = 'dealer wins!'
         document.getElementById('chips').innerHTML-=100
     }
-    else if (getscoreofcards('dealer') == getscoreofcards('player')){
+    else if (getscoreofcards('dealer') == getscoreofcards('player',true)){
         document.getElementById('winner').innerHTML = 'push - tie'
     }
 }
