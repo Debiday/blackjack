@@ -9,6 +9,10 @@ to do
 2) keep localstorage
 3) double down
 4) delay between hand hit 
+5) 3:2 payout on blackjack
+6) add option to surrender
+7) add card counter
+8) add multiple deck options
 
 start with 100 chips
 bet size increments of 25, 50, 100
