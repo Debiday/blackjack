@@ -6,7 +6,7 @@
 
 lots of bugs to fix
 1) undefined wins? --> i thought we reset the players array 
-
+I think it's fixed.. was declaring var players again.
 to do 
 
 0) if arr.length less than ... reshuffle
