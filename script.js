@@ -220,6 +220,7 @@ var reset = function () {
     document.getElementById('winner').innerHTML='';
     document.getElementById('playerbust').innerHTML='';
     document.getElementById('dealerbust').innerHTML='';
+    document.getElementById('reset').style.color='grey';
     blackjack = 1;
     players = ['player','dealer'];
     hit('player');
