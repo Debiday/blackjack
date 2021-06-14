@@ -139,7 +139,7 @@ window.onload=function(){
 }
 
 var check17 = function(){
-    if(getscoreofcards('dealer')>17){
+    if(getscoreofcards('dealer')>=17){
         return
     } else {
         hit('dealer')
