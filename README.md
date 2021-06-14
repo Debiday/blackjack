@@ -9,7 +9,7 @@ bugs to fix
 2) dealer hit if less than soft 17 or less than player
 
 features to add
-1) if arr.length less than ... reshuffle
+1) create a reshuffle function
 2) add splits
 3) add double down option
 4) add option to surrender
@@ -18,6 +18,8 @@ features to add
 7) option for dealer to hit/stand on soft 17
 8) add bet size option
 9) ?pass hand to hit so that we can have split hands
+10) grey out next hand until player/dealer wins
+11) graphics
 
 refactor
 1) tidy code up

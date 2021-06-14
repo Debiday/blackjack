@@ -1,5 +1,6 @@
 * {
     font-size: 30px;
+    text-align: center;
 }
 
 #player {
@@ -12,4 +13,9 @@
 
 #buttons {
     border: 3px solid red;
+}
+
+#reset {
+    text-align: center;
+    color:grey;
 }

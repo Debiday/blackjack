@@ -112,6 +112,7 @@ var updatescore = function (who) {
         else if (players[0]=='dealer'){
             document.getElementById('chips').innerHTML-=100
         } 
+        revealNextHand()
     } 
     document.getElementById(who+'score').innerHTML = y
 }
@@ -171,6 +172,7 @@ var stand = function() {
         else if (getscoreofcards('dealer') == getscoreofcards('player',true)){
             document.getElementById('winner').innerHTML = 'push - tie'
         }
+        revealNextHand()
     },1500)
     
 }
@@ -229,4 +231,9 @@ var reset = function () {
 
 var reshuffle = function (){
 
+}
+
+
+var revealNextHand = function () {
+    document.getElementById('reset').style.color = 'black'
 }
